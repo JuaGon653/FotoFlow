@@ -15,14 +15,16 @@ module.exports = {
         }
 
         if (!token) {
-            return res.status(401).send({ message: 'Unauthorized' });
+            return req;
         }
 
         try {
             const { data } = jwt.verify(token, secret, { maxAge: '1d' });
             req.user = data;
         } catch(error) {
-            return res.status(401).send({ message: 'Unauthorized' });
+            console.log('Invalid token');
         }
+
+        return req;
     }
 }
