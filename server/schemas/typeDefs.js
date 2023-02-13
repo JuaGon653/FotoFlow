@@ -41,16 +41,13 @@ const typeDefs = gql`
         users: [User]
         find_email(email: String!): User
         find_username(username: String!): User
+        posts: [Post]
+        find_post(id: ID!): Post
+        user(id: ID!): User
     }
 
     type Mutation {
-        createUser(username: String!, email: String!, password: String!): User
-
-        createPost(user: ID!, caption: String!, photo: String!): Post
-
-        createComment(user: ID!, post: ID!, text: String!): Comment
-
-        addUser(username: String!, email: String!, password: String!): User
+        createUser(username: String!, email: String!, password: String!, fullName: String!): User
     }
 `;
 
