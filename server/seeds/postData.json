@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "This is a post",
+        "photo": "firstPhoto"
+    },
+    {
+        "caption": "Another Post",
+        "photo": "secondPhoto"
+    }
+]
