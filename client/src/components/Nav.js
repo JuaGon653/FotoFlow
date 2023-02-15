@@ -1,29 +1,20 @@
 import React from 'react';
+import '../css/main.css';
 
 export default function Nav() {
     return (
-        <div class="top-bar">
-            <div class="top-bar-left">
-                <ul class="dropdown menu" data-dropdown-menu>
-                <li class="menu-text">Site Title</li>
-                <li>
-                    <a href="#">One</a>
-                    <ul class="menu vertical">
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
+        <div className="top-bar">
+            <div className="top-bar-left">
+                <ul className="menu" data-dropdown-menu>
+                    <li className="menu-text app-name">FotoFlow</li>
                 </ul>
             </div>
-            <div class="top-bar-right">
-                <ul class="menu">
-                <li><input type="search" placeholder="Search" /></li>
-                <li><button type="button" class="button">Search</button></li>
+            <div className="top-bar-right">
+                <ul className="menu">
+                    <li><a href="#">Feed</a></li>
+                    <li><a href="#">My Profile</a></li>
                 </ul>
             </div>
-            </div>
+        </div>
     )
 }
