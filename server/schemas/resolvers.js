@@ -28,6 +28,23 @@ const resolvers = {
             const user = await User.create({ username, email, password, fullName });
             const token = signToken(user);
             return { token, user };
+        },
+        login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email }).populate('followers').populate('following').populate('posts');
+
+            if (!user) {
+                throw new AuthenticationError('No user found with this email address');  
+            }
+            
+            const correctPW = await user.isCorrectPassword(password);
+
+            if (!correctPW) {
+                throw new AuthenticationError('Incorrect credentials');
+            }
+
+            const token = signToken(user);
+
+            return { token, user };
         }
     }
 };
