@@ -11,8 +11,9 @@ export default function Nav() {
             </div>
             <div className="top-bar-right">
                 <ul className="menu">
-                    <li><a href="#">Feed</a></li>
+                    <li><a href="/">Feed</a></li>
                     <li><a href="#">My Profile</a></li>
+                    <li><a href="/login">Login</a></li>
                 </ul>
             </div>
         </div>
