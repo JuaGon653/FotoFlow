@@ -16,6 +16,10 @@ export default function PostList({ posts }) {
                         <h4>{post.photo}</h4>
                         <p>{post.caption}</p>
                     </div>
+                    <div className="card-section grid-x">
+                        <button className="cell small-2">Like</button>
+                        <button className="cell small-4" >Comment</button>
+                    </div>
                 </div>
             ))
             }
