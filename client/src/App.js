@@ -6,6 +6,7 @@ import { setContext } from '@apollo/client/link/context';
 
 import Nav from './components/Nav';
 import Home from './pages/Home';
+import Login from './pages/Login';
 
 import UserProvider from './utils/UserContext';
 
@@ -51,6 +52,7 @@ export default function App() {
             <Nav />
             <Routes>
               <Route path='/' element={<Home />} />
+              <Route path='/login' element={<Login />} />
             </Routes>
           </div>
         </Router>
