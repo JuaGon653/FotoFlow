@@ -12,7 +12,7 @@ export default function Home() {
     return (
         <div className="grid-x">
             <div className="cell small-4"></div>
-            <div className="cell small-4 text-center">
+            <div className="cell small-4">
                 {loading ? (
                     <div>Loading...</div>
                 ) : (
